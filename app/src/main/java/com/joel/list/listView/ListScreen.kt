@@ -6,10 +6,10 @@ import androidx.compose.runtime.Composable
 import com.joel.list.model.MovieItem
 
 @Composable
-fun ListScreen(carsList : List<MovieItem>){
+fun ListScreen(moviesList : List<MovieItem>){
 
    LazyColumn{
-       itemsIndexed(items = carsList){ _, movie ->
+       itemsIndexed(items = moviesList){ _, movie ->
            MovieCardItem(movie = movie )
        }
    }
