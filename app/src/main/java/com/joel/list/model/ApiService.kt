@@ -8,7 +8,7 @@ import retrofit2.http.GET
 interface ApiService {
 
     @GET(ApiConstant.END_POINT)
-    suspend fun getCars(): List<Cars>
+    suspend fun getCars(): List<MovieItem>
 
     companion object{
         private var apiService : ApiService ?= null
