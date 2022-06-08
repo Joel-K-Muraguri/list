@@ -44,6 +44,7 @@ fun MovieCardItem(
 
            }
             Column() {
+
                 Text(
                     text = movie.name,
                     fontWeight = FontWeight.ExtraBold,
@@ -51,6 +52,7 @@ fun MovieCardItem(
                     color = Color.Black
 
                 )
+
                 Text(
                     text = movie.category,
                     fontWeight = FontWeight.Bold,
