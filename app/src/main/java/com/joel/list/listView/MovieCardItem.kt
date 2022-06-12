@@ -25,6 +25,8 @@ import com.joel.list.model.MovieItem
 fun MovieCardItem(
     movie: MovieItem
 ){
+
+
     Surface(
         modifier = Modifier
             .fillMaxWidth()
@@ -41,8 +43,7 @@ fun MovieCard(
     Row(
         modifier = Modifier
             .height(50.dp)
-            .size(150.dp)
-            ,
+            .size(150.dp),
 
     ) {
         MoviePictureComposable(movie)
@@ -56,7 +57,7 @@ fun MoviePictureComposable(
 ){
     Card(
         modifier = Modifier
-            .size(80.dp),
+            .size(50.dp),
 
     ) {
          AsyncImage(
@@ -76,30 +77,25 @@ fun MoviePictureComposable(
 fun MovieContentComposable(
     movie: MovieItem
 ){
-    Column(
-       modifier = Modifier
-           .fillMaxSize()
-
-    ) {
+    Column() {
         Text(
             text = movie.name,
             fontWeight = FontWeight.ExtraBold,
-            fontSize = 50.sp
+            fontSize = 20.sp
         )
         Text(
             text = movie.category,
             modifier = Modifier
                 .background(Color.Cyan),
-            fontSize = 20.sp
-
+            fontSize = 10.sp
         )
         Text(
             text = movie.desc,
-            fontSize = 10.sp,
+            fontSize = 5.sp,
             fontWeight = FontWeight.ExtraLight,
-            overflow = TextOverflow.Ellipsis,
-            maxLines = 5
+            overflow = TextOverflow.Ellipsis
         )
+
     }
 
 }
